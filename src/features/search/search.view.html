@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>        
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card>
+      <ion-card-header>
+        <strong>Search results</strong>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card *ngFor="let place of searchresults">
+
+    <img [src]="place.img"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{place.title}}
+      </ion-card-title>
+      <strong>{{place.location}}</strong>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>      
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

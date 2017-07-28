@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>    
+    <tool-bar></tool-bar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title>Places in 'Chennai'</ion-title>
+  <ion-card>
+      <ion-card-header>
+        <strong>Recommended for you</strong>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card *ngFor="let place of recommended">
+
+    <img [src]="place.img" (click)="gotoDetails(place)"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{place.title}}
+      </ion-card-title>
+      <strong>{{place.location}}</strong>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>      
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+      </ion-card-content>
+    </ion-card>    
+    <ion-card>
+      <ion-card-header>
+        <strong>Food & Bars</strong>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card *ngFor="let place of foods">
+
+    <img [src]="place.img" (click)="gotoDetails(place)"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{place.title}}
+      </ion-card-title>
+      <strong>{{place.location}}</strong>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='star'></ion-icon>
+          Favorite
+        </button>
+      </ion-col>      
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left>
+          <ion-icon name='share-alt'></ion-icon>
+          Share
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        Categories
+      </ion-card-header>
+      <ion-card-content class="card-background-page">
+  <ion-card>
+    <!--<img src="https://i0.wp.com/chennaispeakers.com/wp-content/uploads/2015/11/KALAKSHETRA-A-divine-place-of-Arts.jpg"/>-->
+    <img src="assets/kalakshetra.jpg"/>
+    <div class="card-title">Arts</div>
+    <div class="card-subtitle">41 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <!--<img src="http://www.furitravel.com/wp-content/uploads/2016/12/SUR-GRUPO-1024x1024.jpg"/>-->
+    <img src="assets/Temples-in-Mahabalipuram.jpg"/>
+    <div class="card-title">Heritage</div>
+    <div class="card-subtitle">64 Listings</div>
+  </ion-card>
+
+  <ion-card>
+    <!--<img src="http://www.mylaikapaleeswarar.tnhrce.in/images/kapali_2.png"/>-->
+    <img src="assets/kapali.png"/>
+    <div class="card-title">Temples</div>
+    <div class="card-subtitle">72 Listings</div>
+  </ion-card> 
+
+</ion-card-content>
+    </ion-card>
+
+  
+</ion-content>
