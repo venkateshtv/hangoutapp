@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+// import {HttpClientModule} from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../features/home/home';
@@ -13,7 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ComponentModule } from '../components/components.module';
-
+// HttpClientModule
 @NgModule({
   declarations: [
     MyApp,
@@ -27,6 +28,7 @@ import { ComponentModule } from '../components/components.module';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ComponentModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

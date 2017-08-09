@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
-    searchQuery: string = '';
-    items: [
+    public searchQuery: string = '';
+    public items: [
         {
             "name": "thalankuppam_pier",
             "title": "Thalankuppam Pier",
@@ -43,13 +43,18 @@ export class SearchComponent {
 
 
         // set val to the value of the searchbar
-        /*let val = ev.target.value;
+        //let val = ev.target.value;        
+        alert(this.searchQuery);
+        
+        // // if the value is an empty string don't filter the items
+        // if (val && val.trim() != '') {
+        //     let result= this.items.filter((item) => {
+        //         return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        //     });
+        // }
+    }
 
-        // if the value is an empty string don't filter the items
-        if (val && val.trim() != '') {
-            this.items = this.items.filter((item) => {
-                return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
-            })
-        }*/
+    onSearchCancel(ev:any){
+
     }
 }

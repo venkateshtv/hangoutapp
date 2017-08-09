@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="header">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>    
@@ -7,11 +7,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-title>Places in 'Chennai'</ion-title>
-  <ion-card>
+<ion-content padding class="app-background">
+  <!-- <ion-title>Places in 'Chennai'</ion-title> -->
+   <ion-fab top right edge>
+    <button ion-fab mini>Squiry</button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-card color="card-back">
       <ion-card-header>
-        <strong>Recommended for you</strong>
+        <ion-title><strong>Recommended for you</strong></ion-title>
       </ion-card-header>
       <ion-card-content>
         <ion-card *ngFor="let place of recommended">
@@ -43,9 +52,9 @@
   </ion-card>
       </ion-card-content>
     </ion-card>    
-    <ion-card>
+    <ion-card color="card-back">
       <ion-card-header>
-        <strong>Food & Bars</strong>
+        <ion-title><strong>Food & Bars</strong></ion-title>
       </ion-card-header>
       <ion-card-content>
         <ion-card *ngFor="let place of foods">
@@ -77,9 +86,9 @@
   </ion-card>
       </ion-card-content>
     </ion-card>
-    <ion-card>
+    <ion-card color="card-back">
       <ion-card-header>
-        Categories
+        <ion-title><strong>Categories</strong></ion-title>
       </ion-card-header>
       <ion-card-content class="card-background-page">
   <ion-card>

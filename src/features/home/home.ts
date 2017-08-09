@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DetailsComponent } from '../details/details.component';
-
+// import { PlaceService } from '../../domain/places/place.service';
+import { Place } from '../../domain/places/place';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage {  
+  recommendedPlaces:Place[];
   recommended = [
   {
     "name": "thalankuppam_pier",
@@ -64,8 +66,10 @@ foods = [
     "Description": "Amadora is all about gourmet stuff and freshly baked warm goodies and icecreams and sorbets "
   }
 ];
-  constructor(public navCtrl: NavController) {
 
+  constructor(public navCtrl: NavController) {
+    //,private placeService: PlaceService
+    // placeService.getRecommendations().subscribe(data => this.recommendedPlaces = data);
   } 
   public gotoDetails(place){
     this.navCtrl.push(DetailsComponent,{place:place});
